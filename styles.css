@@ -12,6 +12,7 @@ body {
   min-height: 100vh;
   position: relative;
   line-height: 1.6;
+  font-size: 18px;
 }
 
 /* Фоновое изображение для всех страниц */
@@ -100,6 +101,7 @@ footer p {
 }
 
 /* Адаптив */
+/* Малые экраны (до 600px) */
 @media (max-width: 600px) {
   .container {
     padding: 20px 10px;
@@ -107,4 +109,72 @@ footer p {
   h1 { font-size: 2rem; }
   h2 { font-size: 1.5rem; }
   nav a { padding: 6px 10px; font-size: 0.9rem; }
+}
+
+/* ======== Дополнительная адаптивность ======== */
+
+/* Фон для планшетов и небольших экранов */
+@media (max-width: 768px) {
+  .page-bg {
+    background-position: top center;
+    background-size: cover;
+  }
+
+  body {
+    font-size: 16px;
+  }
+
+  .container {
+    margin: 20px 10px;
+    padding: 20px 15px;
+    border-radius: 8px;
+  }
+
+  h1 {
+    font-size: 1.8rem;
+  }
+
+  h2 {
+    font-size: 1.4rem;
+  }
+
+  nav {
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+  }
+
+  nav a {
+    width: 100%;
+    text-align: center;
+    font-size: 1rem;
+  }
+
+  main ul li::before {
+    margin-right: 6px;
+  }
+
+  footer p {
+    font-size: 0.8rem;
+  }
+}
+
+/* Очень маленькие экраны (например, iPhone SE) */
+@media (max-width: 400px) {
+  h1 {
+    font-size: 1.6rem;
+  }
+
+  h2 {
+    font-size: 1.2rem;
+  }
+
+  nav a {
+    font-size: 0.85rem;
+    padding: 5px 8px;
+  }
+
+  .container {
+    padding: 15px 10px;
+  }
 }
